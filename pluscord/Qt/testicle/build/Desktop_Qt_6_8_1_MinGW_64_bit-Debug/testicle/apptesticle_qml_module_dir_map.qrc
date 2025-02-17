@@ -1,0 +1,6 @@
+<RCC>
+  <qresource prefix="/">
+    <file alias="/qt/qml/testicle">C:/Users/Matyáš/Documents/pluscord/Qt/testicle/build/Desktop_Qt_6_8_1_MinGW_64_bit-Debug/testicle</file>
+
+  </qresource>
+</RCC>

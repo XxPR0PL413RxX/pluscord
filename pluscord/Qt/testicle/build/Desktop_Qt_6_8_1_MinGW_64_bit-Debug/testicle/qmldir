@@ -1,0 +1,5 @@
+module testicle
+typeinfo apptesticle.qmltypes
+prefer :/qt/qml/testicle/
+Main 1.0 Main.qml
+
