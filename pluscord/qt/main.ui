@@ -1,0 +1,346 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>801</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Pluscord - (Server_Name, Channel_Name)</string>
+  </property>
+  <property name="whatsThis">
+   <string>Pluscord - (Server_Name, Channel_Name)</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QFrame" name="ChatInput">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>510</y>
+      <width>651</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Shape::StyledPanel</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Shadow::Raised</enum>
+    </property>
+    <widget class="QLineEdit" name="ChatTextInput">
+     <property name="geometry">
+      <rect>
+       <x>90</x>
+       <y>0</y>
+       <width>521</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="placeholderText">
+      <string>Send a message into (Channel_Name)...</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="ChatAddEmoji">
+     <property name="geometry">
+      <rect>
+       <x>50</x>
+       <y>0</y>
+       <width>41</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="whatsThis">
+      <string>Add an emoji into your message..</string>
+     </property>
+     <property name="text">
+      <string>Emoji</string>
+     </property>
+    </widget>
+    <widget class="QCommandLinkButton" name="ChatSendText">
+     <property name="geometry">
+      <rect>
+       <x>610</x>
+       <y>0</y>
+       <width>41</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="whatsThis">
+      <string>Send a message into (Channel_Name)...</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>30</width>
+       <height>30</height>
+      </size>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="ChatAddFile">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>0</y>
+       <width>41</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="whatsThis">
+      <string>Add a File into your message..</string>
+     </property>
+     <property name="text">
+      <string>File</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QScrollArea" name="ChatOutputView">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>-20</y>
+      <width>651</width>
+      <height>521</height>
+     </rect>
+    </property>
+    <property name="whatsThis">
+     <string/>
+    </property>
+    <property name="sizeAdjustPolicy">
+     <enum>QAbstractScrollArea::SizeAdjustPolicy::AdjustToContents</enum>
+    </property>
+    <property name="widgetResizable">
+     <bool>true</bool>
+    </property>
+    <widget class="QWidget" name="scrollAreaWidgetContents">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>0</y>
+       <width>649</width>
+       <height>519</height>
+      </rect>
+     </property>
+     <widget class="QPlainTextEdit" name="ChatTextView">
+      <property name="geometry">
+       <rect>
+        <x>-7</x>
+        <y>19</y>
+        <width>661</width>
+        <height>501</height>
+       </rect>
+      </property>
+      <property name="readOnly">
+       <bool>true</bool>
+      </property>
+     </widget>
+    </widget>
+   </widget>
+   <widget class="QFrame" name="frame">
+    <property name="geometry">
+     <rect>
+      <x>660</x>
+      <y>0</y>
+      <width>141</width>
+      <height>551</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Shape::StyledPanel</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Shadow::Raised</enum>
+    </property>
+    <widget class="QScrollArea" name="UserViewScroll">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>0</y>
+       <width>141</width>
+       <height>551</height>
+      </rect>
+     </property>
+     <property name="widgetResizable">
+      <bool>true</bool>
+     </property>
+     <widget class="QWidget" name="scrollAreaWidgetContents_3">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>139</width>
+        <height>549</height>
+       </rect>
+      </property>
+      <widget class="QWidget" name="UserListWidget" native="true">
+       <property name="geometry">
+        <rect>
+         <x>-1</x>
+         <y>-1</y>
+         <width>141</width>
+         <height>551</height>
+        </rect>
+       </property>
+       <widget class="QWidget" name="UserViewData" native="true">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>0</y>
+          <width>141</width>
+          <height>51</height>
+         </rect>
+        </property>
+        <widget class="QLabel" name="UserName">
+         <property name="geometry">
+          <rect>
+           <x>50</x>
+           <y>10</y>
+           <width>81</width>
+           <height>20</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Placeholder</string>
+         </property>
+        </widget>
+        <widget class="QGraphicsView" name="UserProfileIcon">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>10</y>
+           <width>31</width>
+           <height>31</height>
+          </rect>
+         </property>
+        </widget>
+        <widget class="QLabel" name="UserStatus">
+         <property name="geometry">
+          <rect>
+           <x>50</x>
+           <y>30</y>
+           <width>81</width>
+           <height>19</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Placeholder</string>
+         </property>
+        </widget>
+       </widget>
+      </widget>
+     </widget>
+    </widget>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="MainMenuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>801</width>
+     <height>33</height>
+    </rect>
+   </property>
+   <property name="nativeMenuBar">
+    <bool>true</bool>
+   </property>
+   <widget class="QMenu" name="MenuServers">
+    <property name="title">
+     <string>Servers</string>
+    </property>
+    <widget class="QMenu" name="menuPlaceholder_01">
+     <property name="title">
+      <string>Placeholder 01</string>
+     </property>
+     <addaction name="actionPlaceholder_Channel"/>
+     <addaction name="separator"/>
+     <addaction name="actionLeave_Server"/>
+    </widget>
+    <addaction name="Add_servers"/>
+    <addaction name="separator"/>
+    <addaction name="menuPlaceholder_01"/>
+   </widget>
+   <widget class="QMenu" name="menuSettings">
+    <property name="title">
+     <string>Settings</string>
+    </property>
+    <addaction name="actionAbout"/>
+   </widget>
+   <widget class="QMenu" name="menuDebug">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="title">
+     <string>Debug</string>
+    </property>
+    <addaction name="actionOpen_Console"/>
+    <addaction name="separator"/>
+    <addaction name="actionAdd_Fake_User"/>
+    <addaction name="actionAdd_Fake_Server"/>
+    <addaction name="actionSend_Test_Message"/>
+   </widget>
+   <addaction name="MenuServers"/>
+   <addaction name="menuSettings"/>
+   <addaction name="menuDebug"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar">
+   <property name="whatsThis">
+    <string/>
+   </property>
+  </widget>
+  <action name="Add_servers">
+   <property name="text">
+    <string>Add servers..</string>
+   </property>
+  </action>
+  <action name="actionAbout">
+   <property name="text">
+    <string>About</string>
+   </property>
+  </action>
+  <action name="actionPlaceholder_Channel">
+   <property name="text">
+    <string>Placeholder Channel</string>
+   </property>
+  </action>
+  <action name="actionLeave_Server">
+   <property name="text">
+    <string>Leave Server</string>
+   </property>
+  </action>
+  <action name="actionOpen_Console">
+   <property name="checkable">
+    <bool>false</bool>
+   </property>
+   <property name="text">
+    <string>Open Console</string>
+   </property>
+  </action>
+  <action name="actionAdd_Fake_User">
+   <property name="text">
+    <string>Add Fake User</string>
+   </property>
+  </action>
+  <action name="actionAdd_Fake_Server">
+   <property name="text">
+    <string>Add Fake Server</string>
+   </property>
+  </action>
+  <action name="actionSend_Test_Message">
+   <property name="text">
+    <string>Send Test Message</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
