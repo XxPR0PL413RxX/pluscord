@@ -1,0 +1,49 @@
+import sys
+import time
+import PyQt6
+from PyQt6.QtWidgets import QApplication, QWidget, QMainWindow, QVBoxLayout, QLabel, QDialog
+from PyQt6 import uic
+
+AboutForm, AboutWindow = uic.loadUiType("/home/adhdfurro/Dokumenty/pluscord/pluscord/qt/startwarning.ui")
+error_notaddedWindow, error_notaddedForm = uic.loadUiType("/home/adhdfurro/Dokumenty/pluscord/pluscord/qt/error_notadded.ui")
+
+class error_notadded(error_notaddedWindow, error_notaddedForm):
+    def __int__(self):
+        super().__init__()
+        self.setupUi(self)
+class AboutWindow(AboutWindow, AboutForm):
+    def __init__(self):
+        super().__init__()
+        self.setupUi(self)
+
+MainForm, BassClass = uic.loadUiType("/home/adhdfurro/Dokumenty/pluscord/pluscord/qt/main.ui") 
+
+class MainWindow(QMainWindow, MainForm):
+    def __init__(self):
+        super().__init__()
+        self.setupUi(self)
+
+        self.ChatAddEmoji.clicked.connect(self.on_chat_add_emoji_click)
+    def on_chat_add_emoji_click(self):
+        print("Feature not added yet.")
+        self.error_notadded = error_notadded()
+        self.error_notadded.show()
+
+        self.actionAbout.triggered.connect(self.show_about_window)
+    def show_about_window(self):
+        print("About Window triggered.")
+        self.about_window = AboutWindow()
+        self.about_window.show()
+
+        self.actionOpen_Console.triggered.connect(self.open_console_click)
+    def open_console_click(self):
+        print("Opens Terminal")
+        self.error_notadded = error_notadded()
+        self.error_notadded.show()
+        # exec(DebugScrypt)
+
+if __name__ == "__main__":
+    app = QApplication(sys.argv)
+    window = MainWindow()
+    window.show()
+    sys.exit(app.exec())
